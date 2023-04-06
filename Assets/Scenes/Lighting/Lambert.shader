@@ -51,7 +51,7 @@ Shader "Custom/BRDF/Lambert"
 
             half4 frag(Varyings IN) : SV_Target
             {
-                // 이걸 안 하면 버텍스 사이 픽셀 노멀의 길이가 1이 아닌 것들이 발생함.
+               
                 IN.normal = normalize(IN.normal);
 
                 half4 color = SAMPLE_TEXTURE2D(_BaseMap, sampler_BaseMap, IN.uv);
