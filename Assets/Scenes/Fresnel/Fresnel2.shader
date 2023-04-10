@@ -1,4 +1,4 @@
-Shader "Lighting/Fresnel1" 
+Shader "Lighting/Fresnel2" 
 {
 Properties
 {
@@ -76,8 +76,8 @@ half3 rim = 1.0 - (pow(face, _RimPower));
 //emissive term
 //color.rgb *= saturate(dot(i.normal, light)) * _MainLightColor.rgb + ambient ;
 //emissive term
-//color.rgb += rim * _RimInten * _RimColor;
-    color.rgb+=_RimColor*_RimInten*face;
+color.rgb += rim * _RimInten * _RimColor;
+   // color.rgb+=_RimColor*_RimInten*face;
  
 return color; 
 }

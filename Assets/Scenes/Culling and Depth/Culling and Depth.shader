@@ -20,7 +20,7 @@ Shader "Demo/CullingAndDepth"
         {
             Blend SrcAlpha OneMinusSrcAlpha
             // Cull face
-            Cull[_Cull]
+           Cull[_Cull] 
             // Depth tests
             ZWrite[_ZWrite]
             ZTest[_ZTest]
