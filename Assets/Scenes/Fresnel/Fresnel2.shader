@@ -69,6 +69,7 @@ float4 color = float4(0, 0, 0, 1);
 //바라보는 방향이 같은 1(밝음) 90도면 0(어두움)이 됩니다.
 half face = saturate(dot(i.WorldSpaceViewDirection, i.normal));
 half3 rim = 1.0 - (pow(face, _RimPower));
+   //half3 rim = 1.0 - face;
 //Finally, in the function, you can find the operation pow( XRG, NRG ) 
 //which allows you to increase or decrease the range of reflection.
 //지수승으로 하는 것임!
